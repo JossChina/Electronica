@@ -1,0 +1,38 @@
+[PROJECT]
+Target=PRACTICA1.HEX
+Development_Mode=2
+Processor=0x877F
+ToolSuite=CCS
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[PRACTICA1.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=C:\Users\ciria\OneDrive\ESCRIT~1\INGENI~1\7\SISTEM~1\pic\PRACTI~1\PRACTI~1.C
+
+[Windows]
+0=0000 C:\Users\ciria\OneDrive\ESCRIT~1\INGENI~1\7\SISTEM~1\pic\PRACTI~1\PRACTI~1.C 0 0 796 451 3 0
+
+[Opened Files]
+1=C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.c
+2=
+[Units]
+Count=1
+1=C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.c (main)

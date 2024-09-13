@@ -1,0 +1,121 @@
+CCS PCM C Compiler, Version 3.249, 28193               25-oct.-23 08:36
+
+               Filename: C:\Users\josse\Documents\7 semestre\ChavaCano\programa4\programa4.lst
+
+               ROM used: 80 words (1%)
+                         Largest free fragment is 2048
+               RAM used: 17 (10%) at main() level
+                         18 (10%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... #include <16f877.h> 
+.................... //////// Standard Header file for the PIC16F877 device //////////////// 
+.................... #device PIC16F877 
+.................... #list 
+....................  
+.................... #FUSES XT,NOWDT,NOPROTECT,PUT 
+.................... #USE DELAY( CLOCK=20000000) 
+0004:  MOVLW  2D
+0005:  MOVWF  04
+0006:  MOVF   00,W
+0007:  BTFSC  03.2
+0008:  GOTO   016
+0009:  MOVLW  06
+000A:  MOVWF  78
+000B:  CLRF   77
+000C:  DECFSZ 77,F
+000D:  GOTO   00C
+000E:  DECFSZ 78,F
+000F:  GOTO   00B
+0010:  MOVLW  7B
+0011:  MOVWF  77
+0012:  DECFSZ 77,F
+0013:  GOTO   012
+0014:  DECFSZ 00,F
+0015:  GOTO   009
+0016:  BCF    0A.3
+0017:  BCF    0A.4
+0018:  GOTO   04A (RETURN)
+.................... //DEFINICIONES GLOBALES 
+.................... //Definiciones de Variables Globales 
+.................... //declaración de subrutinas o Métodos 
+.................... //Programa Principal 
+.................... void main(){ 
+0019:  CLRF   04
+001A:  MOVLW  1F
+001B:  ANDWF  03,F
+001C:  BSF    03.5
+001D:  BSF    1F.0
+001E:  BSF    1F.1
+001F:  BSF    1F.2
+0020:  BCF    1F.3
+.................... //Definiciones de Variables Locales 
+.................... //output_d(0x00);//para borrar la entrada de los puertos  
+.................... int ochopinocho[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f}; 
+0021:  MOVLW  3F
+0022:  BCF    03.5
+0023:  MOVWF  21
+0024:  MOVLW  06
+0025:  MOVWF  22
+0026:  MOVLW  5B
+0027:  MOVWF  23
+0028:  MOVLW  4F
+0029:  MOVWF  24
+002A:  MOVLW  66
+002B:  MOVWF  25
+002C:  MOVLW  6D
+002D:  MOVWF  26
+002E:  MOVLW  7D
+002F:  MOVWF  27
+0030:  MOVLW  07
+0031:  MOVWF  28
+0032:  MOVLW  7F
+0033:  MOVWF  29
+0034:  MOVLW  6F
+0035:  MOVWF  2A
+.................... int c; 
+.................... //Configuración de Puertos 
+.................... //Prueba de Definiciones globales 
+.................... //Bucle principal 
+....................   while(1){ 
+....................      //Instrucciones del programa 
+....................      for(c=0;c<=9;c++){ 
+0036:  CLRF   2B
+0037:  MOVF   2B,W
+0038:  SUBLW  09
+0039:  BTFSS  03.0
+003A:  GOTO   04E
+....................         output_d(ochopinocho[c]); 
+003B:  MOVLW  21
+003C:  ADDWF  2B,W
+003D:  MOVWF  04
+003E:  MOVF   00,W
+003F:  MOVWF  2C
+0040:  BSF    03.5
+0041:  CLRF   08
+0042:  BCF    03.5
+0043:  MOVF   2C,W
+0044:  MOVWF  08
+....................         delay_ms(1000);   
+0045:  MOVLW  04
+0046:  MOVWF  2C
+0047:  MOVLW  FA
+0048:  MOVWF  2D
+0049:  GOTO   004
+004A:  DECFSZ 2C,F
+004B:  GOTO   047
+....................      } 
+004C:  INCF   2B,F
+004D:  GOTO   037
+....................   }//end while 
+004E:  GOTO   036
+.................... }//end main 
+004F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF1   XT NOWDT PUT NOPROTECT BROWNOUT LVP NOCPD NOWRT NODEBUG

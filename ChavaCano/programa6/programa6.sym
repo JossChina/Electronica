@@ -1,0 +1,46 @@
+008     PSP_DATA
+015-016 CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-02A main.ochopinocho
+02B     main.c
+02C     main.i
+02D     @delay_ms1.P1
+02D     main.@SCRATCH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+
+0004  @delay_ms1
+0019  main
+0019  @cinit
+
+Project Files:
+    C:\Users\josse\Documents\7 semestre\ChavaCano\programa6\programa6.c
+    C:\Program Files (x86)\PICC\devices\16f877.h
+
+Units:
+    C:\Users\josse\Documents\7 semestre\ChavaCano\programa6\programa6.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\josse\Documents\7 semestre\ChavaCano\programa6\programa6.err
+    INHX8:       C:\Users\josse\Documents\7 semestre\ChavaCano\programa6\programa6.hex
+    Symbols:     C:\Users\josse\Documents\7 semestre\ChavaCano\programa6\programa6.sym
+    List:        C:\Users\josse\Documents\7 semestre\ChavaCano\programa6\programa6.lst
+    Debug/COFF:  C:\Users\josse\Documents\7 semestre\ChavaCano\programa6\programa6.cof
+    Call Tree:   C:\Users\josse\Documents\7 semestre\ChavaCano\programa6\programa6.tre
+    Statistics:  C:\Users\josse\Documents\7 semestre\ChavaCano\programa6\programa6.sta

@@ -1,0 +1,38 @@
+[PROJECT]
+Target=programa4.HEX
+Development_Mode=2
+Processor=0x877F
+ToolSuite=CCS
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=C:\Users\josse\Documents\7 semestre\ChavaCano\programa4\programa4.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[programa4.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=C:\Users\josse\DOCUME~1\7SEMES~1\CHAVAC~1\PROGRA~4\PROGRA~1.C
+
+[Windows]
+0=0000 C:\Users\josse\DOCUME~1\7SEMES~1\CHAVAC~1\PROGRA~4\PROGRA~1.C 0 0 796 451 3 0
+
+[Opened Files]
+1=C:\Users\josse\Documents\7 semestre\ChavaCano\programa4\programa4.c
+2=
+[Units]
+Count=1
+1=C:\Users\josse\Documents\7 semestre\ChavaCano\programa4\programa4.c (main)

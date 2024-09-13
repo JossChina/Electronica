@@ -1,0 +1,89 @@
+CCS PCM C Compiler, Version 3.249, 28193               18-oct.-23 08:42
+
+               Filename: C:\Users\carlo\OneDrive\Documentos\chavacano\programa 2\practica2.lst
+
+               ROM used: 43 words (1%)
+                         Largest free fragment is 2048
+               RAM used: 6 (3%) at main() level
+                         6 (3%) worst case
+               Stack:    0 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <16f877.h> 
+.................... //////// Standard Header file for the PIC16F877 device //////////////// 
+.................... #device PIC16F877 
+.................... #list 
+....................  
+.................... #FUSES XT,NOWDT,NOPROTECT,PUT 
+.................... #USE DELAY( CLOCK=20000000) 
+.................... //DEFINICIONES GLOBALES 
+.................... //Definiciones de Variables Globales 
+.................... //declaración de subrutinas o Métodos 
+.................... //Programa Principal 
+.................... void main(){ 
+0004:  CLRF   04
+0005:  MOVLW  1F
+0006:  ANDWF  03,F
+0007:  BSF    03.5
+0008:  BSF    1F.0
+0009:  BSF    1F.1
+000A:  BSF    1F.2
+000B:  BCF    1F.3
+.................... //Definiciones de Variables Locales 
+.................... //Configuración de Puertos 
+.................... set_tris_b(0xff); 
+000C:  MOVLW  FF
+000D:  MOVWF  06
+.................... set_tris_d(0x00); 
+000E:  MOVLW  00
+000F:  MOVWF  08
+.................... //Prueba de Definiciones globales 
+.................... //Bucle principal 
+....................   while(1){ 
+....................      //Instrucciones del programa 
+....................      if(input_state(PIN_B0)==1) 
+0010:  MOVLW  00
+0011:  BCF    03.5
+0012:  BTFSC  06.0
+0013:  MOVLW  01
+0014:  SUBLW  01
+0015:  BTFSS  03.2
+0016:  GOTO   020
+....................      { 
+....................          output_high(PIN_D0); 
+0017:  BSF    03.5
+0018:  BCF    08.0
+0019:  BCF    03.5
+001A:  BSF    08.0
+....................          output_low(PIN_D1); 
+001B:  BSF    03.5
+001C:  BCF    08.1
+001D:  BCF    03.5
+001E:  BCF    08.1
+....................      } 
+....................      else 
+001F:  GOTO   028
+....................      { 
+....................          output_low(PIN_D0); 
+0020:  BSF    03.5
+0021:  BCF    08.0
+0022:  BCF    03.5
+0023:  BCF    08.0
+....................          output_high(PIN_D1); 
+0024:  BSF    03.5
+0025:  BCF    08.1
+0026:  BCF    03.5
+0027:  BSF    08.1
+....................      } 
+....................   }//end while 
+0028:  BSF    03.5
+0029:  GOTO   010
+.................... }//end main 
+002A:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF1   XT NOWDT PUT NOPROTECT BROWNOUT LVP NOCPD NOWRT NODEBUG

@@ -1,0 +1,29 @@
+
+ROM used: 17 (0%)
+          17 (0%) including unused fragments
+
+          0 Average locations per line
+          6 Average locations per statement
+
+RAM used: 5 (3%) at main() level
+          5 (3%) worst case
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   20     3 100  C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.c
+  280     0   0  C:\Program Files (x86)\PICC\devices\16f877.h
+----- -----
+  600     6 Total
+
+Page ROM  %  RAM  Functions:
+---- --- --- ---  ----------
+0     13  76   0  main
+
+ Segment   Used  Free
+---------  ----  ----
+00000-00003     4  0  
+00004-007FF    13  2031  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+

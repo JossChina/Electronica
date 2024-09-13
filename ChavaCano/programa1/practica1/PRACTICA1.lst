@@ -1,0 +1,54 @@
+CCS PCM C Compiler, Version 3.249, 28193               18-oct.-23 07:55
+
+               Filename: C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.lst
+
+               ROM used: 17 words (0%)
+                         Largest free fragment is 2048
+               RAM used: 5 (3%) at main() level
+                         5 (3%) worst case
+               Stack:    0 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <16f877.h> 
+.................... //////// Standard Header file for the PIC16F877 device //////////////// 
+.................... #device PIC16F877 
+.................... #list 
+....................  
+.................... #FUSES XT,NOWDT,NOPROTECT,PUT 
+.................... #USE DELAY( CLOCK=20000000) 
+.................... //DEFINICIONES GLOBALES 
+.................... #define prende_pin(x) output_high(x) 
+.................... #define apaga_pin(x) output_low(x) 
+.................... //Definiciones de Variables Globales 
+.................... //declaración de subrutinas o Métodos 
+.................... //Programa Principal 
+.................... void main(){ 
+0004:  CLRF   04
+0005:  MOVLW  1F
+0006:  ANDWF  03,F
+0007:  BSF    03.5
+0008:  BSF    1F.0
+0009:  BSF    1F.1
+000A:  BSF    1F.2
+000B:  BCF    1F.3
+.................... //Definiciones de Variables Locales 
+.................... //Configuración de Puertos 
+.................... //Prueba de Definiciones globales 
+.................... prende_pin(PIN_D0); 
+000C:  BCF    08.0
+000D:  BCF    03.5
+000E:  BSF    08.0
+.................... //Bucle principal 
+....................   while(1){ 
+....................      //Instrucciones del programa 
+....................   }//end while 
+000F:  GOTO   00F
+.................... }//end main 
+0010:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF1   XT NOWDT PUT NOPROTECT BROWNOUT LVP NOCPD NOWRT NODEBUG

@@ -1,0 +1,30 @@
+
+ROM used: 80 (1%)
+          80 (1%) including unused fragments
+
+          0 Average locations per line
+          13 Average locations per statement
+
+RAM used: 17 (10%) at main() level
+          18 (10%) worst case
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   24     6 100  C:\Users\josse\Documents\7 semestre\ChavaCano\programa4\programa4.c
+  280     0   0  C:\Program Files (x86)\PICC\devices\16f877.h
+----- -----
+  608    12 Total
+
+Page ROM  %  RAM  Functions:
+---- --- --- ---  ----------
+0     21  26   1  @delay_ms1
+0     55  69  12  main
+
+ Segment   Used  Free
+---------  ----  ----
+00000-00003     4  0  
+00004-007FF    76  1968  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+

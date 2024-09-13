@@ -1,0 +1,39 @@
+008     PSP_DATA
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+
+0004  main
+0004  @cinit
+
+Project Files:
+    C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.c
+    C:\Program Files (x86)\PICC\devices\16f877.h
+
+Units:
+    C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.err
+    INHX8:       C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.hex
+    Symbols:     C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.sym
+    List:        C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.lst
+    Debug/COFF:  C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.cof
+    Call Tree:   C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.tre
+    Statistics:  C:\Users\ciria\OneDrive\Escritorio\ingenieria en sistemas\7\SISTEMAS PROGRAMABLES\pic\practica1\PRACTICA1.sta

@@ -1,0 +1,16 @@
+#include <16f877.h>
+#FUSES XT,NOWDT,NOPROTECT,PUT
+#USE DELAY( CLOCK=20000000)
+//DEFINICIONES GLOBALES
+//Definiciones de Variables Globales
+//declaración de subrutinas o Métodos
+//Programa Principal
+void main(){
+//Definiciones de Variables Locales
+//Configuración de Puertos
+//Prueba de Definiciones globales
+//Bucle principal
+  while(1){
+     //Instrucciones del programa
+  }//end while
+}//end main

@@ -1,0 +1,223 @@
+CCS PCM C Compiler, Version 3.249, 28193               25-oct.-23 08:21
+
+               Filename: C:\Users\josse\Documents\7 semestre\ChavaCano\programa3\programa3.lst
+
+               ROM used: 157 words (2%)
+                         Largest free fragment is 2048
+               RAM used: 17 (10%) at main() level
+                         17 (10%) worst case
+               Stack:    0 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <16f877.h> 
+.................... //////// Standard Header file for the PIC16F877 device //////////////// 
+.................... #device PIC16F877 
+.................... #list 
+....................  
+.................... #FUSES XT,NOWDT,NOPROTECT,PUT 
+.................... #USE DELAY( CLOCK=20000000) 
+.................... //DEFINICIONES GLOBALES 
+.................... //Definiciones de Variables Globales 
+.................... //declaración de subrutinas o Métodos 
+.................... //Programa Principal 
+.................... void main(){ 
+0004:  CLRF   04
+0005:  MOVLW  1F
+0006:  ANDWF  03,F
+0007:  BSF    03.5
+0008:  BSF    1F.0
+0009:  BSF    1F.1
+000A:  BSF    1F.2
+000B:  BCF    1F.3
+.................... //Definiciones de Variables Locales 
+.................... //output_d(0x00);//para borrar la entrada de los puertos  
+.................... int ochopinocho[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x67}; 
+000C:  MOVLW  3F
+000D:  BCF    03.5
+000E:  MOVWF  21
+000F:  MOVLW  06
+0010:  MOVWF  22
+0011:  MOVLW  5B
+0012:  MOVWF  23
+0013:  MOVLW  4F
+0014:  MOVWF  24
+0015:  MOVLW  66
+0016:  MOVWF  25
+0017:  MOVLW  6D
+0018:  MOVWF  26
+0019:  MOVLW  7D
+001A:  MOVWF  27
+001B:  MOVLW  07
+001C:  MOVWF  28
+001D:  MOVLW  7F
+001E:  MOVWF  29
+001F:  MOVLW  67
+0020:  MOVWF  2A
+.................... //Configuración de Puertos 
+.................... //Prueba de Definiciones globales 
+.................... //Bucle principal 
+....................   while(1){ 
+....................      //Instrucciones del programa 
+....................      if(input_state(PIN_B0)==0)//si oprimimos el botun que esta conectado al pin b0 
+0021:  MOVLW  00
+0022:  BTFSC  06.0
+0023:  MOVLW  01
+0024:  XORLW  00
+0025:  BTFSS  03.2
+0026:  GOTO   02C
+....................        output_d(ochopinocho[0]);//encedemos el 0 con el puerto d 
+0027:  BSF    03.5
+0028:  CLRF   08
+0029:  BCF    03.5
+002A:  MOVF   21,W
+002B:  MOVWF  08
+....................       
+....................      if(input_state(PIN_B1)==0)//si oprimimos el botun que esta conectado al pin b0 
+002C:  MOVLW  00
+002D:  BTFSC  06.1
+002E:  MOVLW  01
+002F:  XORLW  00
+0030:  BTFSS  03.2
+0031:  GOTO   037
+....................        output_d(ochopinocho[1]);//encedemos el 0 con el puerto d 
+0032:  BSF    03.5
+0033:  CLRF   08
+0034:  BCF    03.5
+0035:  MOVF   22,W
+0036:  MOVWF  08
+....................         
+....................      if(input_state(PIN_B2)==0)//si oprimimos el botun que esta conectado al pin b0 
+0037:  MOVLW  00
+0038:  BTFSC  06.2
+0039:  MOVLW  01
+003A:  XORLW  00
+003B:  BTFSS  03.2
+003C:  GOTO   042
+....................        output_d(ochopinocho[2]);//encedemos el 0 con el puerto d 
+003D:  BSF    03.5
+003E:  CLRF   08
+003F:  BCF    03.5
+0040:  MOVF   23,W
+0041:  MOVWF  08
+....................         
+....................      if(input_state(PIN_B3)==0)//si oprimimos el botun que esta conectado al pin b0 
+0042:  MOVLW  00
+0043:  BTFSC  06.3
+0044:  MOVLW  01
+0045:  XORLW  00
+0046:  BTFSS  03.2
+0047:  GOTO   04D
+....................        output_d(ochopinocho[3]);//encedemos el 0 con el puerto d 
+0048:  BSF    03.5
+0049:  CLRF   08
+004A:  BCF    03.5
+004B:  MOVF   24,W
+004C:  MOVWF  08
+....................       
+....................      if(input_state(PIN_B4)==0)//si oprimimos el botun que esta conectado al pin b0 
+004D:  MOVLW  00
+004E:  BTFSC  06.4
+004F:  MOVLW  01
+0050:  XORLW  00
+0051:  BTFSS  03.2
+0052:  GOTO   058
+....................        output_d(ochopinocho[4]);//encedemos el 0 con el puerto d 
+0053:  BSF    03.5
+0054:  CLRF   08
+0055:  BCF    03.5
+0056:  MOVF   25,W
+0057:  MOVWF  08
+....................         
+....................      if(input_state(PIN_B5)==0)//si oprimimos el botun que esta conectado al pin b0 
+0058:  MOVLW  00
+0059:  BTFSC  06.5
+005A:  MOVLW  01
+005B:  XORLW  00
+005C:  BTFSS  03.2
+005D:  GOTO   063
+....................        output_d(ochopinocho[5]);//encedemos el 0 con el puerto d 
+005E:  BSF    03.5
+005F:  CLRF   08
+0060:  BCF    03.5
+0061:  MOVF   26,W
+0062:  MOVWF  08
+....................       
+....................      if(input_state(PIN_B6)==0)//si oprimimos el botun que esta conectado al pin b0 
+0063:  MOVLW  00
+0064:  BTFSC  06.6
+0065:  MOVLW  01
+0066:  XORLW  00
+0067:  BTFSS  03.2
+0068:  GOTO   06E
+....................        output_d(ochopinocho[6]);//encedemos el 0 con el puerto d 
+0069:  BSF    03.5
+006A:  CLRF   08
+006B:  BCF    03.5
+006C:  MOVF   27,W
+006D:  MOVWF  08
+....................       
+....................      if(input_state(PIN_B7)==0)//si oprimimos el botun que esta conectado al pin b0 
+006E:  MOVLW  00
+006F:  BTFSC  06.7
+0070:  MOVLW  01
+0071:  XORLW  00
+0072:  BTFSS  03.2
+0073:  GOTO   079
+....................        output_d(ochopinocho[7]);//encedemos el 0 con el puerto d 
+0074:  BSF    03.5
+0075:  CLRF   08
+0076:  BCF    03.5
+0077:  MOVF   28,W
+0078:  MOVWF  08
+....................         
+....................      if(input_state(PIN_B1)==0 && input_state(PIN_B7)==0)//si oprimimos el botun que esta conectado al pin b0 
+0079:  MOVLW  00
+007A:  BTFSC  06.1
+007B:  MOVLW  01
+007C:  XORLW  00
+007D:  BTFSS  03.2
+007E:  GOTO   08A
+007F:  MOVLW  00
+0080:  BTFSC  06.7
+0081:  MOVLW  01
+0082:  XORLW  00
+0083:  BTFSS  03.2
+0084:  GOTO   08A
+....................        output_d(ochopinocho[8]);//encedemos el 0 con el puerto d 
+0085:  BSF    03.5
+0086:  CLRF   08
+0087:  BCF    03.5
+0088:  MOVF   29,W
+0089:  MOVWF  08
+....................         
+....................      if(input_state(PIN_B2)==0 && input_state(PIN_B7)==0)//si oprimimos el botun que esta conectado al pin b0 
+008A:  MOVLW  00
+008B:  BTFSC  06.2
+008C:  MOVLW  01
+008D:  XORLW  00
+008E:  BTFSS  03.2
+008F:  GOTO   09B
+0090:  MOVLW  00
+0091:  BTFSC  06.7
+0092:  MOVLW  01
+0093:  XORLW  00
+0094:  BTFSS  03.2
+0095:  GOTO   09B
+....................        output_d(ochopinocho[9]);//encedemos el 0 con el puerto d 
+0096:  BSF    03.5
+0097:  CLRF   08
+0098:  BCF    03.5
+0099:  MOVF   2A,W
+009A:  MOVWF  08
+....................       
+....................   }//end while 
+009B:  GOTO   021
+.................... }//end main 
+009C:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF1   XT NOWDT PUT NOPROTECT BROWNOUT LVP NOCPD NOWRT NODEBUG
